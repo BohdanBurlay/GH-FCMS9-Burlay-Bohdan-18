@@ -1,0 +1,108 @@
+{#
+/**
+ * @file
+ * Template for the main page.
+ */
+#}
+<div class="page">
+  {% embed '@radix/navbar/navbar.twig' with {
+    placement: 'sticky-top',
+    container: 'fixed',
+    color: 'light',
+    utility_classes: ['bg-light'],
+  } %}
+
+
+    {% block branding %}
+      {% if page.navbar_branding %}
+        <div class="logo-menu-container">
+          {{ page.navbar_branding }}
+        </div>
+      {% endif %}
+    {% endblock %}
+
+    {% block left %}
+      {% if page.navbar_left %}
+        <div class="mr-auto">
+          {{ page.navbar_left }}
+        </div>
+      {% endif %}
+    {% endblock %}
+
+    {% block right %}
+      {% if page.navbar_right %}
+        {{ page.navbar_right }}
+      {% endif %}
+    {% endblock %}
+  {% endembed %}
+
+  <main class="pt-5 pb-5">
+
+    {% if page.header %}
+      <header class="page__header mb-3">
+        <div class="container">
+          {{ page.header }}
+        </div>
+      </header>
+    {% endif %}
+
+    {% if page.content %}
+      <div class="page__content">
+        <div class="container-fluid main-page-content">
+          {{ page.content }}
+        </div>
+      </div>
+    {% endif %}
+  </main>
+
+  {% if page.footer %}
+    <footer class="page__footer">
+      <div class="container">
+        <div class="d-flex justify-content-md-between align-items-md-center">
+          {{ page.footer }}
+        </div>
+      </div>
+    </footer>
+  {% endif %}
+</div>
+
+
+<script>
+
+  let sliderArr = Array.from(document.querySelectorAll('.slide-wrap'))
+  function ShowHide(arr,display){
+    for (let i=0;i<arr.length;i++){
+      arr[i].style.display=display
+    }
+  }
+  ShowHide(sliderArr,'none')//hide all slides
+  let firstShowSlide=2;
+  let lastShowSlide=5;
+  ShowHide(sliderArr.slice(firstShowSlide,lastShowSlide),'block')//show first 3 slides
+
+  let prevSlideButton=document.querySelector('.previous-slide')
+  let nextSlideButton=document.querySelector('.next-slide')
+  prevSlideButton.onclick=function () {
+    nextSlideButton.style.display='block'
+    firstShowSlide-=1
+    lastShowSlide-=1
+    if(firstShowSlide==0){
+      prevSlideButton.style.display='none'
+    }
+    ShowHide(sliderArr,'none')
+    console.log(firstShowSlide)
+      ShowHide(sliderArr.slice(firstShowSlide,lastShowSlide),'block')
+  }
+
+  nextSlideButton.onclick=function () {
+    prevSlideButton.style.display='block'
+    firstShowSlide+=1
+    lastShowSlide+=1
+    if(firstShowSlide==3){
+      nextSlideButton.style.display='none'
+    }
+    ShowHide(sliderArr,'none')
+    console.log(firstShowSlide)
+    ShowHide(sliderArr.slice(firstShowSlide,lastShowSlide),'block')
+  }
+</script>

@@ -1,0 +1,280 @@
+// Page: Content
+// -----------------------------------------------------------------------------
+
+.best-section {
+  background-size: cover;
+  background-position-x: 42%;
+
+  & > .best__field-section-background-picture {
+    display: none;
+  }
+}
+
+@media screen and(min-width: 320px) and (max-width: 570px) {
+  .best-section {
+    flex-direction: column;
+  }
+}
+
+@media screen and(min-width: 320px) and (max-width: 1182px) {
+  .best-section {
+
+    padding: 0 10px;
+  }
+}
+
+.best-items-wrap {
+  max-width: 598px;
+  padding: 145px 0;
+}
+
+@media screen and(min-width: 320px) and (max-width: 970px) {
+  .best-items-wrap {
+    padding: 30px 0;
+    text-align: center;
+  }
+}
+
+.best-item-title {
+  color: #ffffff;
+  font-family: 'Roboto',;
+  font-size: 48px;
+  font-weight: 700;
+  line-height: 36px;
+}
+
+.unique-title-text {
+  font-weight: 300;
+}
+
+.best-item-descriprion {
+  color: #ffffff;
+  font-family: 'Roboto',;
+  font-size: 18px;
+  font-weight: 300;
+  line-height: 30px;
+  margin-top: 20px;
+}
+
+.best-items-wrap>.link-block > a {
+  @include link-styles;
+  margin: 41px 0 0 0;
+}
+
+@media screen and(min-width: 320px) and (max-width: 970px) {
+  .best-items-content > a {
+    margin: 20px auto 0 auto;
+  }
+}
+
+.section-title-text {
+  @include section-title;
+  text-align: center;
+}
+
+.what-we-do-section {
+  padding: 104px 0;
+}
+
+.items-container {
+  max-width: 1301px !important;
+  margin: 111px auto;
+}
+
+.section-item-title {
+  color: #000000;
+  font-family: 'Roboto',;
+  font-size: 26px;
+  font-weight: 700;
+  line-height: 36px;
+}
+
+.section-item-text {
+  color: #949494;
+  font-family: 'Roboto',;
+  font-size: 16px;
+  font-weight: 300;
+  line-height: 30px;
+  word-wrap: break-word;
+  max-width: 417px;
+}
+
+.article-content {
+  margin-left: 40px;
+}
+
+.section-items-content {
+  &:nth-child(3) {
+    margin-top: 60px;
+  }
+
+  &:nth-child(4) {
+    margin-top: 60px;
+  }
+}
+
+.link-block > a {
+  @include link-styles;
+  margin: 0 auto;
+}
+
+.slider-item {
+  background-size: cover;
+  height: 100%;
+  max-height: 400px;
+
+  &:hover {
+    & > .wrap-content-div {
+      visibility: visible;
+    }
+  }
+}
+
+.slide-wrap {
+  max-width: 33.3%;
+  width: 100%;
+}
+
+@media screen and (max-width: 956px) {
+  .slider-section {
+    display: none !important;
+  }
+}
+
+.wrap-content-div {
+  padding: 100px 0 67px 0;
+  text-align: center;
+  background-color: rgba(0, 0, 0, 0.63);
+  cursor: pointer;
+  visibility: hidden;
+  transition: 0.3s ease;
+}
+
+.slide-title {
+  color: #ffffff;
+  font-family: 'Roboto',;
+  font-size: 30px;
+  font-weight: 400;
+  line-height: 36px;
+  text-align: center;
+}
+
+.slide-paragraph {
+  color: #ffffff;
+  font-family: "Proxima Nova";
+  font-size: 16px;
+  font-weight: 300;
+  line-height: 24px;
+  text-align: center;
+  max-width: 387px;
+  margin: 0 auto;
+}
+
+.slider-section {
+  position: relative;
+}
+
+.slide-link > a {
+  @include link-styles;
+  margin: 30px auto 0 auto;
+}
+
+.slider-button {
+  position: absolute;
+  top: 50%;
+  max-width: 38px;
+  max-height: 38px;
+  width: 100%;
+  height: 100%;
+  color: transparent;
+  background-color: rgba(255, 255, 255, 1);
+  background-size: 30%;
+  background-repeat: no-repeat;
+  background-position: center;
+  border: 0;
+
+  &:hover {
+    background-color: rgba(232, 236, 238, 1);;
+  }
+}
+
+.previous-slide {
+  left: 0;
+  background-image: url("/themes/custom/mytheme/src/img/left_Arrow.png");
+}
+
+.next-slide {
+  right: 0;
+  background-image: url("/themes/custom/mytheme/src/img/right_arrow.png");
+}
+
+.abou-us__field-section-background-image > img {
+  display: none;
+}
+
+.about-us-title {
+  @include section-title;
+  color: white;
+  text-align: center;
+}
+
+.about-us {
+  padding: 119px 0;
+}
+
+.about-us-description {
+  @include section-description;
+  max-width: 699px;
+  text-align: center;
+  margin: 30px auto 0 auto;
+}
+
+.member-item {
+  max-width: 260px;
+}
+
+@media screen and (min-width: 320px) and (max-width: 600px) {
+  .member-item {
+    margin: 20px auto;
+  }
+}
+
+@media screen and (min-width: 600px) {
+  .member-item {
+    margin: 20px auto;
+  }
+}
+
+.member-face-content > img {
+  display: block;
+  margin: 0 auto;
+}
+
+.member-name {
+  color: #ffffff;
+  font-family: 'Roboto',;
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 36px;
+  text-align: center;
+  margin-top: 20px;
+}
+
+.member-description {
+  color: #949494;
+  font-family: 'Roboto',;
+  font-size: 18px;
+  font-weight: 300;
+  line-height: 30px;
+  text-align: center;
+}
+
+.member-wrap {
+  margin: 120px auto 111px auto;
+}
+
+@media screen and(min-width: 320px) and (max-width: 600px) {
+  .member-wrap {
+    flex-direction: column;
+  }
+}

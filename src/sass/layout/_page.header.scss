@@ -1,0 +1,131 @@
+// Page: Header
+// -----------------------------------------------------------------------------
+.navbar-brand > img {
+  max-width: 289px;
+  max-height: 32px;
+  width: 100%;
+  height: 100%;
+}
+
+.page > .navbar {
+  padding: 0 !important;
+}
+
+.logo-menu-container {
+  position: absolute;
+  top: 22px;
+  left: 0;
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+}
+
+.main-navigation {
+  max-width: 555px;
+
+  & > li {
+    position: relative;
+    margin-left: 34px;
+
+    &:nth-child(1) {
+      margin-left: 0;
+    }
+
+    &:hover {
+      & > a:before {
+        transition: 0.3s ease;
+        display: block;
+      }
+    }
+
+    & > a {
+      position: relative;
+      color: #000000 !important;
+      font-family: 'Roboto',;
+      font-size: 18px;
+      font-weight: 400;
+      line-height: 24px;
+
+      &:before {
+        content: '';
+        position: absolute;
+        width: 110%;
+        height: 110%;
+        top: -4px;
+        left: -4px;
+        border-radius: 18px;
+        border: 1px solid rgba(0, 0, 0, 0.3);
+        cursor: pointer;
+        display: none;
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 320px) and(max-width: 992px) {
+  .main-navigation {
+    & > li {
+      margin-left: 0;
+    }
+  }
+}
+
+.logo-menu {
+  background-color: transparent;
+  padding-top: 39px;
+
+  & > .navbar {
+    padding: 0 !important;
+    width: 100%;
+    background-color: transparent !important;
+  }
+}
+
+.logo-menu-content {
+  background-color: transparent;
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+}
+
+.header {
+  margin-top: -47px;
+  padding: 305px 0 500px 0;
+  background-size: cover;
+  background-position-x: 50%;
+}
+
+.header-content {
+  text-align: center;
+}
+
+.main-page-title {
+  @include section-title;
+}
+
+@media screen and(max-width: 600px) {
+  .main-page-title {
+    line-height: 1.5;
+  }
+}
+
+.header-description {
+  @include section-description;
+}
+
+.header>.link-block > a {
+  @include link-styles;
+  margin: 63px auto 0 auto;
+}
+
+.page-title {
+  display: none;
+}
+
+.navbar-toggler {
+  display: none !important;
+}
+
+.main-page-content {
+  padding: 0 !important;
+}

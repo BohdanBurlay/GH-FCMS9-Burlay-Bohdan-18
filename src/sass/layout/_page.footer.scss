@@ -1,0 +1,27 @@
+// Page: Footer
+// -----------------------------------------------------------------------------
+.footer {
+  padding: 66px 0 580px 0;
+}
+
+@media screen and(min-width: 320px) and(max-width: 686px) {
+  .footer {
+    padding: 66px 10px 580px 10px;
+  }
+}
+
+.footer-text {
+  max-width: 665px;
+  text-align: center;
+  margin: 0 auto;
+  color: #a7acbc;
+  font-family: 'Roboto',;
+  font-size: 18px;
+  font-weight: 300;
+  line-height: 36px;
+}
+
+.footer-link {
+  font-weight: 700;
+  color: #B1B5C4;
+}
